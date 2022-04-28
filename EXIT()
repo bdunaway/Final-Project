@@ -1,0 +1,22 @@
+public static void EXIT() throws IOException {
+		FileUtils.writeLineToOutputFile("Thank you for visiting High's Hardware and Gardening!");
+		System.out.println("Press enter to continue...");
+		addKeyListener(new KeyListener() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				
+			}
+
+			@Override
+			public void keyPressed(KeyEvent e) {
+				if(e.getKeyCode()==KeyEvent.VK_ENTER){
+					System.exit(0);
+				}
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+
+			}
+		});
+	}
